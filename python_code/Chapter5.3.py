@@ -3,10 +3,10 @@ import matplotlib.pyplot as plt
 
 n = 50
 N = 1000
-x = np.linspace(-3, 3, n).T.reshape(n, 1)
-X = np.linspace(-3, 3, N).T.reshape(N, 1)
+x = np.linspace(-3, 3, n).reshape(n, 1)
+X = np.linspace(-3, 3, N).reshape(N, 1)
 pix = np.pi * x
-y = (np.sin(pix) / pix + 0.1 * x).reshape(n, -1) + np.dot(0.2, np.random.randn(n, 1))
+y = (np.sin(pix) / pix + 0.1 * x) + 0.2 * np.random.randn(n, 1)
 hh = 2 * 0.3 ** 2
 learning_rate = 0.1
 t0 = np.random.randn(n, 1)
